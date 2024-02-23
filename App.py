@@ -4,10 +4,8 @@ import requests
 API_URL = "https://api-inference.huggingface.co/models/MIT/ast-finetuned-audioset-10-10-0.4593"
 headers = {"Authorization": "Bearer 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"}
 
-def query(filename):
-    with open(filename, "rb") as f:
-        data = f.read()
-    response = requests.post(API_URL, headers=headers, data=data)
+def query(file_content):
+    response = requests.post(API_URL, headers=headers, data=file_content)
     return response.json()
 
 def about_project():
@@ -30,20 +28,27 @@ def about_project():
 
 def voice_testing():
     st.title("Voice Testing")
-    st.write("Upload an audio file and click 'Test' to analyze it.")
+    st.write("Upload an audio file (in WAV or MP3 format) and click 'Test' to analyze it.")
 
-    uploaded_file = st.file_uploader("Choose an audio file...", type=["wav"])
+    uploaded_file = st.file_uploader("Choose an audio file...", type=["wav", "mp3"])
 
     if uploaded_file is not None:
         st.write("File uploaded successfully!")
 
+        # Display the preview of the uploaded audio file
+        file_type = uploaded_file.type
+        st.audio(uploaded_file, format='audio/wav' if 'wav' in file_type else 'audio/mpeg')
+
         # Perform voice testing
-        output = query(uploaded_file)
+        file_content = uploaded_file.read()
+        output = query(file_content)
         labels = [entry['label'] for entry in output]
 
         st.write("Predicted labels:")
-        for label in labels:
-            st.write(label)
+        if "Screaming" in labels:
+            st.write("Screaming")
+        else:
+            st.write(labels[0])
 
 def main():
     page = st.sidebar.selectbox("Choose a page", ["About Project", "Voice Testing"])
