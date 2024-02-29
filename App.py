@@ -12,14 +12,14 @@ def about_project():
     st.title("About Project")
     st.write(
         """
-        ## Voice Testing App
+        ## Audio Classification App
 
         This is a Streamlit app that allows you to test audio files against a pre-trained model.
 
         The app provides two main functionalities:
 
         - **About Project**: Learn more about the project and its objectives.
-        - **Voice Testing**: Upload an audio file and test it against the pre-trained model to identify sounds.
+        - **Audio Testing**: Upload an audio file and test it against the pre-trained model to identify sounds.
 
         This app uses the Hugging Face API for inference.
 
@@ -27,7 +27,7 @@ def about_project():
     )
 
 def voice_testing():
-    st.title("Voice Testing")
+    st.title("Audio Testing")
     st.write("Upload an audio file (in WAV or MP3 format) and click 'Test' to analyze it.")
 
     uploaded_file = st.file_uploader("Choose an audio file...", type=["wav", "mp3"])
