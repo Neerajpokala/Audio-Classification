@@ -21,7 +21,7 @@ def about_project():
         - **About Project**: Learn more about the project and its objectives.
         - **Audio Testing**: Upload an audio file and test it against the pre-trained model to identify sounds.
 
-        This app uses the Hugging Face API for inference.
+        
 
         """
     )
