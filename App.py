@@ -14,11 +14,20 @@ def about_project():
     **Introduction:**
     The audio classification model project aimed to develop a system capable of accurately categorizing audio samples into predefined classes or labels. Leveraging machine learning techniques, the project addressed various challenges inherent in audio data analysis and classification.
 
-    **Key Components:**
-    1. **Data Collection and Preprocessing:**
-    - The project began with the acquisition of diverse audio datasets covering a wide range of classes or categories.
-    - Data preprocessing steps were crucial, involving audio normalization, feature extraction, and, potentially, data augmentation to enhance model generalization.
-
+    **Abstract**
+    Crime remains a prevalent issue in our society, with incidents like robberies, murders, and assaults 
+occurring daily worldwide. One common challenge is the delayed response of authorities to crime 
+scenes, often attributed to a lack of timely and accurate information.To address this concern, our 
+project introduces a discreet desktop application. Functioning seamlessly in the background, the 
+application employs advanced technologies, including Machine Learning and Deep Learning 
+models especially SVM and MLP, to detect and analyze human screams in realtime. In the event 
+of a potential emergency, the application initiates an automatic alert sent via SMS to pre
+designated contacts.This innovative solution not only contributes to faster response times but also 
+excels in discerning clear human sounds amidst background noise, thereby improving the 
+accuracy of threat identification. By leveraging technology to enhance emergency response, the 
+project aims to create safer communities and minimize the impact of criminal activities on 
+individuals and society as a whole. Through these efforts, we aspire to empower individuals to 
+take proactive measures in ensuring their safety and the well-being of their communities.  
     2. **Model Architecture:**
     - The selection of an appropriate model architecture significantly impacted the classification performance.
     - Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), or hybrid models might have been explored based on the nature of the audio data and classification requirements.
