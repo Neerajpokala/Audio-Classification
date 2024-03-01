@@ -9,7 +9,7 @@ def query(file_content):
     return response.json()
 
 def about_project():
-    st.title("About Project")
+    st.title("Human scream detection using SVM and MLP")
     review_text = """
     **Introduction:**
     The audio classification model project aimed to develop a system capable of accurately categorizing audio samples into predefined classes or labels. Leveraging machine learning techniques, the project addressed various challenges inherent in audio data analysis and classification.
