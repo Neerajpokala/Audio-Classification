@@ -96,6 +96,7 @@ def voice_testing():
         st.write("Predicted labels:")
         if "Screaming" in labels:
             st.write("Screaming")
+            time.sleep(3)
             st.write(" An SOS Message as been sent Sucessfully")
         else:
             st.write(labels[0])
