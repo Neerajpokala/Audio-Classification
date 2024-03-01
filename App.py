@@ -68,7 +68,7 @@ def about_project():
     
 
 def voice_testing():
-    st.title("Audio Testing")
+    st.title("Audio Classification Testing")
     st.write("Upload an audio file (in WAV or MP3 format) and click 'Test' to analyze it.")
 
     uploaded_file = st.file_uploader("Choose an audio file...", type=["wav", "mp3"])
