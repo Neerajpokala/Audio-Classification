@@ -10,6 +10,7 @@ def query(file_content):
 
 def about_project():
     st.title("Human scream detection using SVM and MLP")
+    st.write("**Abstract**")
     st.write("""
 Crime remains a prevalent issue in our society, with incidents like robberies, murders, and assaults 
 occurring daily worldwide. One common challenge is the delayed response of authorities to crime 
